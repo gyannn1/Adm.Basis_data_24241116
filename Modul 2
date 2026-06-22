@@ -1,0 +1,39 @@
+-- Nama		: Muhammad Dede Anggian Rizadi
+-- NIM		: 24241116
+-- Kelas	: D
+-- Modul	: 2
+
+-- praktek 9
+select nama_produk from ms_produk_dqlab;
+
+-- praktek 10
+
+select nama_produk,harga from ms_produk_dqlab;
+
+-- praktek 11
+
+select*from ms_produk_dqlab;
+
+-- praktek 12 prefix berupa nama table
+
+select ms_produk_dqlab.nama_produk from ms_produk_dqlab;
+
+-- praktek 13
+
+select dqlabmartbasic.ms_produk_dqlab.nama_produk from ms_produk_dqlab;
+
+-- praktek 14 Alias
+
+select nama_produk as np from ms_produk_dqlab;
+
+-- praktek 15 tanpa as
+
+select nama_produk np from ms_produk_dqlab;
+
+-- praktek 16 alias pada nama table
+
+select nama_produk from ms_produk_dqlab as msp;
+
+-- praktek 17 prefix dan alias
+
+select msp.nama_produk from ms_produk_dqlab as msp;
