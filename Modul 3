@@ -1,0 +1,57 @@
+-- Nama		: Muhammad Dede Anggian Rizadi
+-- NIM		: 24241116
+-- Kelas	: D
+-- Modul	: 3
+
+-- praktek 1
+select 77;
+
+-- praktek 2 select dengan beberapa nilai literal
+select 77 as angka,true as nilai_logika,'DQLab' as teks;
+
+-- praktek 3 select dengan literal null
+select null as kosong;
+
+-- praktek 4 operasi matematika
+select
+5%2 as sisa_bagi , 5/2 as hasil_bagi_1,5 div 2 as hasil_bagi_2;
+
+-- praktek 5 ekspresi matematika pada kolom table
+select qty*harga as total_beli from tr_penjualan_dqlab;
+
+-- praktek 6 operator perbandingan
+SELECT 5=5, 5<>5, 5<>4, 5!=5,5!=4, 5>4;
+
+-- praktek 7 perbandingan pada kolom tabel
+SELECT 5=5, 5<>5, 5<>4, 5!=5,5!=4, 5>4;
+
+-- praktek 8 fungsi dengan nilai literal
+SELECT POW(3,2), ROUND(3.14), ROUND(3.54), 
+	ROUND(3.155, 1), ROUND(3.155, 2),
+	FLOOR(4.28), FLOOR(4.78), 
+	CEILING(4.39), CEILING(4.55);
+-- praktek 9 Penggunaan fungsi tanggal pada literal    
+SELECT NOW(), YEAR('2022-05-03'), DATEDIFF('2022-07-22', '2022-05-03'), DAY('2022-05-03');
+
+-- praktek 10 Penggunaan fungsi tanggal pada kolom table
+SELECT datediff(now(), tgl_transaksi ) from tr_penjualan_dqlab;
+
+-- praktek 11 Penggunaan WHERE
+SELECT nama_produk, qty FROM tr_penjualan_dqlab WHERE qty>3;
+
+-- praktek 12 Penggunaan WHERE dengan multi kriteria
+SELECT nama_produk, qty FROM tr_penjualan_dqlab WHERE qty>3 AND month(tgl_transaksi)=6;
+
+-- praktek 13 Penggunaan WHERE dengan kriteria teks
+SELECT nama_produk, qty FROM tr_penjualan_dqlab WHERE nama_produk = 'Flashdisk DQLab 32 GB';
+
+-- praktek 14 Penggunaan LIKE 
+SELECT nama_produk FROM tr_penjualan_dqlab WHERE nama_produk LIKE 'f%';
+
+-- praktek 15 Filtering dengan operator logika AND
+SELECT nama_produk FROM tr_penjualan_dqlab WHERE nama_produk LIKE 'f%' AND qty > 2;
+
+-- praktek 16 Filtering dengan operator logika OR
+SELECT nama_produk FROM tr_penjualan_dqlab WHERE nama_produk LIKE 'f%' OR qty > 2;
+
+-- praktek 17 
